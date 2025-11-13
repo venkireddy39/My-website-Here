@@ -8,24 +8,47 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Typing effect style */
+        .typing {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcc00;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #ffcc00;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+    </style>
 </head>
 
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/th.01.jpg" class="logo">
+                <img src="images/th.001.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#services">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark"onclick="closemenu()"></i>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Java Developer</p>
+                <p><span id="typing-text"></span></p>
                 <h1>Hi, I'm <span>Venki</span> <br> From India</h1>
             </div>
         </div>
@@ -36,14 +59,15 @@
         <div class="container">
             <div class="row">
                 <div class="About-col-1">
-                    <img src="images/img2.jpg">
+                    <img src="images/img222.JPG">
                 </div>
                 <div class="About-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p><strong>Hi, I'm Venkateswarareddy.</strong><br>  
-                        <strong>I'm currently pursuing an MCA.</strong><br>  
-                        <strong>I'm passionate about learning and growing in the tech field.</strong><br>  
-                        <strong>I enjoy exploring new opportunities and challenges.</strong></p>
+                    <p>
+Hey there! I'm <strong>Venkateswarareddy</strong>, a passionate <strong>developer</strong> who loves turning ideas into reality through code.  
+Currently pursuing my <strong>MCA</strong>, I enjoy building websites, exploring new tools, and learning something new every day.
+</p>
+
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="Opentab(event, 'Skills')">Skills</p>
                         <p class="tab-links" onclick="Opentab(event, 'Projects')">Projects</p>
@@ -60,57 +84,57 @@
                     </div>
                     <div class="tab-contents" id="Projects">
                         <ul>
-                            <li><span>Project 1</span></li>
-                            <li><span>Project 2</span></li>
+                            <li><span>Personal portfolio</span></li>
+                            <li><span>Flappy Bird Game</span></li>
+                            <li><span>Student Database Management System
+</span></li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Education">
                         <ul>
-                            <li><span>Pursuing</span><br> MCA (Master of Computer Applications)</li>
+                            <li><span>2024-2026</span><br> MCA (Master of Computer Applications)</li>
                             <li><span>2022-2024</span><br> BCA (Bachelor of Computer Applications)</li>
-                            <li><span>2021-2022</span><br> Intermediate (MPC)</li>
-                            <li><span>2019</span><br> SSC (10th)</li>
-                        </ul>
+                            </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--------------------------portfolio------------------------>
+
+    <!---------------------- Portfolio ------------------->
     <div id="portfolio">
         <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-        <div class="work">
-        <img src="images/work-1.png">
-        <div class="layer">
-            <h3> work1</h3>
-            <p>fde dwfedwfc defcced de f edde ed ededd eded eded ed ed</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> hello</a>
-        </div>
-    
-        </div> 
-        <div class="work">
-            <img src="images/work-1.png">
-            
-            <div class="layer">
-                <h3> work2</h3>
-                <p>fde dwfedwfc defcced de f edde ed ededd eded eded ed ed</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> hello</a>
-            </div>
-            </div> 
-            <div class="work">
-                <img src="images/work-1.png">
-                <div class="layer">
-                    <h3> work3</h3>
-                    <p>fde dwfedwfc defcced de f edde ed ededd eded eded ed ed</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> hello</a>
-                </div>
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-01.png">
+                    <div class="layer">
+                        <h3> work1</h3>
+                        <p>Portfolio</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> hello</a>
+                    </div>
                 </div> 
-        
-
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3> work2</h3>
+                        <p>Flappy Bird Game</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> hello</a>
+                    </div>
+                </div> 
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3> work3</h3>
+                        <p>Student Database Management System</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> hello</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
     </div>
-    <!---------------------- Services Section ------------------->
+
+    <!---------------------- Services ------------------->
     <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
@@ -127,17 +151,12 @@
                     <p>Details will be added later.</p>
                     <a href="#">Learn more</a>
                 </div>
-                <div>
-                    <i class="fa-solid fa-database"></i>
-                    <h2><strong>Database Management</strong></h2>
-                    <p>Details will be added later.</p>
-                    <a href="#">Learn more</a>
-                </div>
+                 
             </div>
         </div>
     </div>
 
-    <!---------------------- Contact Section ------------------->
+    <!---------------------- Contact ------------------->
     <div id="contact"> 
         <div class="container">
             <div class="row">
@@ -172,7 +191,6 @@
         <div class="copyright">
             <p><strong>Copyright © Venki. Designed & Developed by Venkateswara Reddy Vemireddy</strong> ❤️</p>
         </div>
-        
     </div> 
 
     <!---------------------- JavaScript ------------------->
@@ -190,19 +208,11 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-    </script>
-    <script>
 
-        var sidemeu =document.getElementById("sidemenu")
-        function openmenu(){
-            sidemeu.style.right ="0";
-        }
-        function closemenu(){
-                sidemeu.style.right ="-200px";   
-            
-        }
-    </script>
-    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() { sidemeu.style.right = "0"; }
+        function closemenu() { sidemeu.style.right = "-200px"; }
+
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzdpms4EmIaRFwPLXyskcZgDhsgGwWjEXI2NEuR4rFRaME5ib7DQ4BYAz5qzUpvY-h5Wg/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
@@ -211,13 +221,40 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
                     msg.innerHTML = "Message Sent Successfully"
-                    setTimeout(function(){
-                        msg.innerHTML = ""
-                    },1000)
+                    setTimeout(function(){ msg.innerHTML = "" },1000)
                     form.reset()   
             })
             .catch(error => console.error('Error!', error.message))
         })
-      </script>
+
+        // 🔥 Typing Effect Script
+        const roles = ["Java Developer", "SQL Developer", "Frontend Developer"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        const typingElement = document.getElementById("typing-text");
+
+        function typeEffect() {
+            if (charIndex < roles[roleIndex].length) {
+                typingElement.textContent += roles[roleIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(deleteEffect, 1000);
+            }
+        }
+
+        function deleteEffect() {
+            if (charIndex > 0) {
+                typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(deleteEffect, 50);
+            } else {
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeEffect, 500);
+            }
+        }
+
+        typeEffect();
+    </script>
 </body>
 </html>
